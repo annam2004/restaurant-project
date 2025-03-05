@@ -1,6 +1,8 @@
 # restaurant-project
 
-Welcome to Little Lemon, an online restaurant reservation system that allows customers to book tables, manage reservations, and experience a seamless dining experience.
+This project was developed as part of Meta's Coursera Front-End Development course, serving as the capstone project for the Front-End Development Track.
+
+The website is a table reservation application for Little Lemon restaurant, built using React components to demonstrate proficiency in building dynamic and responsive web applications. It also incorporates API calls to fetch and display reservation data, showcasing the ability to integrate front-end interfaces with back-end services.
 
 ## Features
 - Table Reservation – Users can book tables by selecting date, time, and seating preferences.
