@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@400;700&display=swap');
+
+
+
+.home-page.navbar.navbar-dark.bg-dark {
+  background-color: #333; /* Dark background for homepage on mobile */
+}
+
+/* For smaller screens (mobile view) */
+@media (max-width: 991px) {
+  .home-page.navbar {
+    background-color: #333; /* Dark background for mobile homepage */
+  }
+  .home-page.navbar.navbar-dark {
+    background-color: #333; /* Ensuring navbar-dark class applies */
+  }
+}
+
+/* Solid navbar for other pages when scrolling */
+.navbar-solid {
+  background-color: #343a40; /* Solid background for other pages */
+}
+
+.navbar-toggler-icon {
+  background-image: url('./images/burger-menu.png'); ;
+}
+
+
+
+
+/* Smooth scrolling fix */
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  /* position: absolute;
+  top: 33%;
+  transform: translateY(-50%); */
+  width: 60px;
+  height: 60px;
+  background: black; /* Black background */
+  color: white;
+  border-radius: 50%; /* Optional: Makes it circular */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+  background-color: white; /* Ensures arrow is visible */
+  mask-image: var(--bs-carousel-control-prev-icon);
+  -webkit-mask-image: var(--bs-carousel-control-prev-icon);
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+
+/* ----- GENERAL LAYOUT Styles ------ */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Markazi Text', serif; 
+}
+
+h2, h3, p {
+  font-family: 'Karla', sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+
+/* ----- HEADER LOGO styling ------*/
+.logo {
+  display: flex;
+  justify-content: center; /* Space between logo and nav */
+  align-items: center;            /* Vertical alignment */
+  padding: 20px;
+  background-color: #f8f8f8;      /* Optional: Background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Shadow */
+}
+
+/* ------ HERO SECTION ------ */
+
+
+.hero-content {
+  margin-top: 14rem;
+}
+.hero-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 11em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid #fff;
+}
+
+.hero-content h1 {
+  font-size: 5em;
+  color: #F4CE14;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+   font-family: Markazi Text;
+    font-size: 3em;
+    font-weight: 400;
+    margin-top: -1rem;
+}
+
+.hero-content p {
+  font-size: 22px;
+  font-family: Karla, sans-serif;
+}
+
+.btn-reserve {
+   color: #333;
+   font-weight: 600;
+   --bs-btn-bg: #F4CE14;
+   --bs-btn-border-color: #F4CE14;
+   --bs-btn-hover-bg: #a28703;
+   --bs-btn-hover-border-color: #a28703;
+   border-radius: 30px;
+    padding: 15px 30px;
+} 
+
+
+
+/* ------ NAVIGATION  */
+
+/* Keep navbar items white */
+.navbar-nav .nav-link {
+  color: #EDEFEE !important;
+}
+.navbar-expand-lg .navbar-nav {
+  gap: 20px;
+  font-size: 18px;
+}
+
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease-in-out;
+}
+.navbar-solid {
+  background-color: #333;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 1em 2em 1em 2em;
+  transition: color 0.3s ease;
+}
+
+
+.nav-item a {
+  text-decoration: none;
+  color: #EDEFEE;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Space between text and underline */
+}
+.nav-item a:hover,
+.nav-item a.active  {
+  color: #EDEFEE;
+}
+
+/* Pseudo-element for the underline */
+.navbar .nav-item a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px; 
+  background-color: #f4ce14; 
+  transition: width 0.3s ease, left 0.3s ease; /* Animation for the underline */
+  
+}
+
+/* Hover effect to expand the underline */
+.nav-item a:hover::after,
+.nav-item a.active::after {
+  width: 100%;
+  left:0;
+}
+
+.navbar-nav .nav-link.active {
+  /* color: #EDEFEE !important; */
+  color: #f4ce14 !important;
+}
+
+
+
+/* ----- SPECIALS Section ----- */
+.specials {
+  text-align: center;
+  padding: 40px;
+  margin-top: 6em;
+}
+
+.specials h1 {
+  font-size: 4em;
+  color:#333333;
+}
+
+.specials h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1.7em;
+}
+
+.specials p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+
+.special-item {
+  height: 160px; 
+}
+
+.price {
+  font-weight: bold;
+  color: #ff5733;
+  margin-bottom: 1em !important;
+}
+
+.menu-button {
+  background-color: #ff5733;
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 28px;
+  font-size: 22px;
+}
+
+.menu-button:hover {
+  background-color: #d93d1a;
+}
+
+.header-menu-button
+ {
+  margin: 4em 0 5em 0;
+ }
+.btn-outline-primary {
+  --bs-btn-color: #495e57;
+  --bs-btn-border-color: #495e57;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #495e57;
+  --bs-btn-hover-border-color: #495e57;
+  --bs-btn-active-bg: #495e57;
+  --bs-btn-active-border-color: #495e57;
+  --bs-btn-disabled-color: #495e57;
+  --bs-btn-disabled-border-color: #495e57;
+  width: 50%;
+  font-weight: 600;
+}
+
+.zoom-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+.slider {
+  margin:0 20px;
+  overflow:"hidden";
+  padding:2rem 0;
+}
+
+.slider img {
+  width: 100%;
+  border-radius:10px;
+}
+
+.react-multi-carousel-list {
+padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button{
+border: none;
+background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+background: rgb(255, 68, 68) !important;
+}
+
+.react-multiple-carousel__arrow {
+  transform: translateY(-125px);
+}
+
+/* ===== TESTIMONIALS Section ===== */
+.testimonials {
+  text-align: center;
+  padding: 40px;
+}
+
+.testimonials h1 {
+  font-size: 4em;
+  margin-bottom: 1em;
+  color:#EDEFEE;
+}
+
+.testimonials .card {
+  --bs-card-bg: rgb(255 255 255 / 22%);
+  color: #EDEFEE;
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: space-between; /* Distributes space evenly between items */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Adjusts space between items */
+}
+
+.review {
+  flex: 1; /* Allows items to grow equally */
+  max-width: 30%; /* Ensures items don't exceed 30% of the container's width */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  padding: 10px;
+  text-align: center;
+}
+
+.review img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review h4 {
+  margin: 10px 0 5px;
+}
+
+.review p {
+  margin: 5px 0;
+}
+
+.bgnTestimonialsImage {
+  background-image: url('./images/lemon2.jpg'); 
+  background-color: rgb(40 49 42);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  height: 57vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== About Section ===== */
+#about-section {
+  overflow: visible;
+  height: auto;
+}
+.about {
+  padding: 50px 0;
+}
+
+.about-content {
+  align-items: center;
+  padding: 50px;
+}
+
+.about-images {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.main-image {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+}
+
+.overlay-image {
+  width: 50%;
+  position: absolute;
+  bottom: -30px;
+  right: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid white;
+}
+
+
+
+/* FOOTER  */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-section {
+
+  margin: 10px 0;
+}
+
+.footer-logo img {
+  max-width: 90px;
+}
+
+.footer-nav ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav li,
+.footer-social li {
+  margin: 5px 0;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* .footer-nav a:hover,
+.footer-social a:hover {
+
+} */
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: #736f6f;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-content {
+    margin-top: 4rem;
+  }
+  .hero-content h1 {
+  font-size: 4em;
+  }
+  .hero-content h2 {
+font-size: 2.3em;
+  }  
+  
+  .hero-content p {
+   font-size: 19px;
+  }
+  .hero-restaurant-img  {
+    display: none;
+  }
+
+  .hero-btn {
+    margin-top: 4em;
+
+  }
+
+  .specials {
+    margin-top: 3em;
+}
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+}
+
+
+/* ----- FORMS ------ */
+
+.form-label  {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control, .form-select {
+   height: 50px;
+   border: var(--bs-border-width) solid #d0d5d9
+}
+
+.bookingForm {
+  text-align: left;
+  margin-bottom: 6em;
+}
+
+.bookingForm p {
+  font-size: 18px;
+}
+
+.bookingForm button {
+  width: 15%;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+@media (min-width: 1400px) {
+  .bookingForm > .container {
+      max-width: 900px;
+  }
+}
+
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 8em;
+  margin-bottom: 3em;
+}
+
+.custom-row {
+  display: flex;
+  align-items: center; 
+  gap: 20px;
+}
+
+
+.custom-col-image, .custom-col-menu {
+  padding: 0 15px;
+}
+
+
+
+.custom-menu-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-menu-item {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.custom-menu-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+
+/* ==== QUERY MEDIAS ===== */
+
+
+@media (min-width: 992px) and (max-width: 1999px) {
+  .overlay-image {
+    width: 55%;
+    right: -28px;
+  }
+  .main-image {
+    width: 92%;
+  }
+
+  .about-images {
+    margin-top: 6rem;
+    
+  }
+
+  .hero img {
+    margin-top: 26em;
+  }
+
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .overlay-image {
+    width: 53%;
+    bottom: 11px;
+  }
+
+  .about-images {
+    margin-top: 3rem;
+    ;
+  }
+
+  .hero img {
+    margin-top: 20em;
+  }
+  .specials {
+    margin-top: 5em;
+  }
+
+}
+@media (min-width: 1400px) {
+  .hero img {
+    margin-top: 20em;
+}
+}
+@media (max-width: 767px) {
+  .bookingForm button {
+    width: 45%;
+  }
+  .bgnTestimonialsImage {
+    height: 130vh;
+  }
+  .carousel-inner .row  {
+    justify-content: normal;
+  }
+  .testimonials h1 {
+    font-size: 3em;
+  
+  }
+
+  .react-multiple-carousel__arrow {
+    transform: translateY(-120px);
+  }
+  .specials {
+    padding: 0;
+    margin-top: 4em;
+  }
+  .specials h1 {
+    font-size: 3em;
+  }
+  .specials h3 {
+    font-size: 1.4em;
+  }
+  .btn-outline-primary {
+    width: 80%;
+  }
+
+.footer-section {
+  text-align: center;
+}
+
+}
+
+@media (max-width: 991px) {
+  .hero-restaurant-img {
+    display: none;
+}
+
+}
+
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .bookingForm button {
+    width: 30%;
+  }
+  .main-image {
+    width: 70%;
+  }
+  .overlay-image {
+    width: 50%;
+    bottom: -74px;
+  }
+  .about {
+    margin-bottom: 4rem;
+  }
+  .hero-content {
+    margin-top: 3rem;
+  }
+  .btn-outline-primary {
+    width: 100%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1467px) {
+  .btn-outline-primary {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .hero-content h1 {
+    font-size: 4em;
+  }
+  .hero img {
+    margin-top: 17em;
+  }
+  .specials {
+    margin-top: 4em;
+  }
+}

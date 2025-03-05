@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta name="description" content="Little Lemon is a family-owned Mediterranean restaurant offering fresh, flavorful dishes with a modern twist. Visit us for an unforgettable dining experience!" />
+    <meta property="og:title" content="Little Lemon Restaurant - Fresh Mediterranean Cuisine" />
+    <meta property="og:description" content="Enjoy delicious Mediterranean dishes at Little Lemon! Fresh ingredients, cozy ambiance, and exceptional service." />
+    <meta property="og:image" content="https://yourwebsite.com/images/little-lemon-og-image.jpg" />
+
+    <title>Little Lemon Restaurant</title>
+
+    <!-- Step 1: Load API script correctly -->
+    <script>
+      function loadAPIScript() {
+        var script = document.createElement("script");
+        script.src = '/api.js';
+        script.onload = function () {
+          window.fetchAPI = fetchAPI;
+          window.submitAPI = submitAPI;
+          console.log("API script loaded successfully!");
+        };
+        script.onerror = function () {
+          console.error("Failed to load API script.");
+        };
+        document.head.appendChild(script);
+      }
+      loadAPIScript();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
